@@ -1,33 +1,33 @@
 // Chips
 .chip {
   align-items: center;
-  background: $bg-color-dark;
+  background: $chip-bg;
   border-radius: 5rem;
   display: inline-flex;
   font-size: 90%;
-  height: $unit-6;
-  line-height: $unit-4;
-  margin: $unit-h;
-  max-width: $control-width-sm;
+  height: $chip-height;
+  line-height: $chip-line-height;
+  margin: $chip-margin;
+  max-width: $chip-max-w;
   overflow: hidden;
-  padding: $unit-1 $unit-2;
+  padding: $chip-padding;
   text-decoration: none;
   text-overflow: ellipsis;
   vertical-align: middle;
   white-space: nowrap;
 
   &.active {
-    background: $primary-color;
-    color: $light-color;
+    background: $chip-bg-active;
+    color: $chip-color-active;
   }
 
   .avatar {
-    margin-left: -$unit-2;
-    margin-right: $unit-1;
+    margin-left: $chip-avatar-margin-left;
+    margin-right: $chip-avatar-margin-right;
   }
 
   .btn-clear {
     border-radius: 50%;
-    transform: scale(.75);
+    transform: scale(0.75);
   }
 }

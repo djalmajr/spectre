@@ -3,32 +3,32 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: $unit-1 0;
+  margin: $nav-margin;
 
   .nav-item {
     a {
-      color: $gray-color-dark;
-      padding: $unit-1 $unit-2;
+      color: $nav-item-color;
+      padding: $nav-item-padding;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: $primary-color;
+        color: $nav-item-hover-color;
       }
     }
     &.active {
       & > a {
-        color: darken($gray-color-dark, 10%);
+        color: $nav-item-active-color;
         font-weight: bold;
         &:focus,
         &:hover {
-          color: $primary-color;
+          color: $nav-item-active-hover-color;
         }
       }
     }
   }
 
   & .nav {
-    margin-bottom: $unit-2;
-    margin-left: $unit-4;
+    margin-bottom: $nav-nav-margin-bottom;
+    margin-left: $nav-nav-margin-left;
   }
 }

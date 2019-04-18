@@ -1,43 +1,43 @@
 // Toasts
 .toast {
   @include toast-variant($dark-color);
-  border: $border-width solid $dark-color;
-  border-radius: $border-radius;
-  color: $light-color;
+  border: $toast-border;
+  border-radius: $toast-radius;
+  color: $toast-color;
   display: block;
-  padding: $layout-spacing;
+  padding: $toast-padding;
   width: 100%;
 
   &.toast-primary {
-    @include toast-variant($primary-color);
+    @include toast-variant($toast-primary-color);
   }
 
   &.toast-success {
-    @include toast-variant($success-color);
+    @include toast-variant($toast-success-color);
   }
 
   &.toast-warning {
-    @include toast-variant($warning-color);
+    @include toast-variant($toast-warning-color);
   }
 
   &.toast-error {
-    @include toast-variant($error-color);
+    @include toast-variant($toast-error-color);
   }
 
   a {
-    color: $light-color;
+    color: $toast-link-color;
     text-decoration: underline;
-    
+
     &:focus,
     &:hover,
     &:active,
     &.active {
-      opacity: .75;
+      opacity: 0.75;
     }
   }
 
   .btn-clear {
-    margin: $unit-h;
+    margin: $toast-clear-margin;
   }
 
   p {

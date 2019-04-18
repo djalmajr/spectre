@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
-  margin: $unit-1 0;
+  margin: $step-margin;
   width: 100%;
 
   .step-item {
@@ -14,7 +14,7 @@
     position: relative;
 
     &:not(:first-child)::before {
-      background: $primary-color;
+      background: $step-item-container-bg;
       content: "";
       height: 2px;
       left: -50%;
@@ -24,45 +24,45 @@
     }
 
     a {
-      color: $primary-color;
+      color: $step-item-color;
       display: inline-block;
       padding: 20px 10px 0;
       text-decoration: none;
 
       &::before {
-        background: $primary-color;
-        border: $border-width-lg solid $light-color;
+        background: $step-item-bg;
+        border: $step-item-border;
         border-radius: 50%;
         content: "";
         display: block;
-        height: $unit-3;
+        height: $step-item-height;
         left: 50%;
         position: absolute;
-        top: $unit-1;
+        top: $step-item-top;
         transform: translateX(-50%);
-        width: $unit-3;
-        z-index: $zindex-0;
+        width: $step-item-width;
+        z-index: $step-item-zindex;
       }
     }
 
     &.active {
       a {
         &::before {
-          background: $light-color;
-          border: $border-width-lg solid $primary-color;
+          background: $step-item-bg-active;
+          border: $step-item-border-active;
         }
       }
 
       & ~ .step-item {
         &::before {
-          background: $border-color;
+          background: $step-item-item-container-bg-active;
         }
 
         a {
-          color: $gray-color;
+          color: $step-item-item-color-active;
 
           &::before {
-            background: $border-color;
+            background: $step-item-item-bg-active;
           }
         }
       }

@@ -1,31 +1,31 @@
 // Tabs
 .tab {
   align-items: center;
-  border-bottom: $border-width solid $border-color;
+  border-bottom: $tab-border-bottom;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: $unit-1 0 ($unit-1 - $border-width) 0;
+  margin: $tab-margin;
 
   .tab-item {
     margin-top: 0;
 
     a {
-      border-bottom: $border-width-lg solid transparent;
+      border-bottom: $tab-item-border-bottom;
       color: inherit;
       display: block;
-      margin: 0 $unit-2 0 0;
-      padding: $unit-2 $unit-1 $unit-2 - $border-width-lg $unit-1;
+      margin: $tab-item-margin;
+      padding: $tab-item-padding;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: $link-color;
+        color: $tab-item-color-hover;
       }
     }
     &.active a,
     a.active {
-      border-bottom-color: $primary-color;
-      color: $link-color;
+      border-bottom-color: $tab-item-border-bottom-color-active;
+      color: $tab-item-color-active;
     }
 
     &.tab-action {
@@ -34,7 +34,7 @@
     }
 
     .btn-clear {
-      margin-top: -$unit-1;
+      margin-top: $tab-clear-margin-top;
     }
   }
 
@@ -50,8 +50,8 @@
       .badge {
         &[data-badge]::after {
           position: absolute;
-          right: $unit-h;
-          top: $unit-h;
+          right: $tab-block-badge-right;
+          top: $tab-block-badge-top;
           transform: translate(0, 0);
         }
       }

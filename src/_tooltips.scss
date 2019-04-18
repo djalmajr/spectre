@@ -2,31 +2,31 @@
 .tooltip {
   position: relative;
   &::after {
-    background: rgba($dark-color, .95);
-    border-radius: $border-radius;
+    background: $tooltip-bg;
+    border-radius: $tooltip-radius;
     bottom: 100%;
-    color: $light-color;
+    color: $tooltip-color;
     content: attr(data-tooltip);
     display: block;
-    font-size: $font-size-sm;
+    font-size: $tooltip-font-size;
     left: 50%;
-    max-width: $control-width-sm;
+    max-width: $tooltip-max-width;
     opacity: 0;
     overflow: hidden;
-    padding: $unit-1 $unit-2;
+    padding: $tooltip-padding;
     pointer-events: none;
     position: absolute;
     text-overflow: ellipsis;
-    transform: translate(-50%, $unit-2);
-    transition: opacity .2s, transform .2s;
+    transform: $tooltip-transform-top;
+    transition: opacity 0.2s, transform 0.2s;
     white-space: pre;
-    z-index: $zindex-3;
+    z-index: $tooltip-zindex;
   }
   &:focus,
   &:hover {
     &::after {
       opacity: 1;
-      transform: translate(-50%, -$unit-1);
+      transform: $tooltip-transform-top-hover;
     }
   }
   &[disabled],
@@ -38,12 +38,12 @@
     &::after {
       bottom: 50%;
       left: 100%;
-      transform: translate(-$unit-1, 50%);
+      transform: $tooltip-transform-right;
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate($unit-1, 50%);
+        transform: $tooltip-transform-right-hover;
       }
     }
   }
@@ -52,27 +52,27 @@
     &::after {
       bottom: auto;
       top: 100%;
-      transform: translate(-50%, -$unit-2);
+      transform: $tooltip-transform-bottom;
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate(-50%, $unit-1);
+        transform: $tooltip-transform-bottom-hover;
       }
     }
   }
-  
+
   &.tooltip-left {
     &::after {
       bottom: 50%;
       left: auto;
       right: 100%;
-      transform: translate($unit-2, 50%);
+      transform: $tooltip-transform-left;
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate(-$unit-1, 50%);
+        transform: $tooltip-transform-left-hover;
       }
     }
   }

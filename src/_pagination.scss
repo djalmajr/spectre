@@ -2,40 +2,40 @@
 .pagination {
   display: flex;
   list-style: none;
-  margin: $unit-1 0;
-  padding: $unit-1 0;
+  margin: $pagination-margin;
+  padding: $pagination-padding;
 
   .page-item {
-    margin: $unit-1 $unit-o;
+    margin: $pagination-item-margin;
 
     span {
       display: inline-block;
-      padding: $unit-1 $unit-1;
+      padding: $pagination-item-span-padding;
     }
 
     a {
-      border-radius: $border-radius;
+      border-radius: $pagination-item-border-radius;
       display: inline-block;
-      padding: $unit-1 $unit-2;
+      padding: $pagination-item-padding;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: $primary-color;
+        color: $pagination-item-color-hover;
       }
     }
 
     &.disabled {
       a {
         cursor: default;
-        opacity: .5;
+        opacity: 0.5;
         pointer-events: none;
       }
     }
 
     &.active {
       a {
-        background: $primary-color;
-        color: $light-color;
+        background: $pagination-item-bg-active;
+        color: $pagination-item-color-active;
       }
     }
 
@@ -54,7 +54,7 @@
 
     .page-item-subtitle {
       margin: 0;
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }

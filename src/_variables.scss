@@ -42,22 +42,28 @@ $link-color-light: lighten($link-color, 10%) !default;
 
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+  Roboto !default;
+$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
+  monospace !default;
 $fallback-font-family: "Helvetica Neue", sans-serif !default;
-$cjk-zh-hans-font-family: $base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", $fallback-font-family !default;
-$cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", $fallback-font-family !default;
-$cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, $fallback-font-family !default;
+$cjk-zh-hans-font-family: $base-font-family, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", $fallback-font-family !default;
+$cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS",
+  "Microsoft JhengHei", $fallback-font-family !default;
+$cjk-jp-font-family: $base-font-family, "Hiragino Sans",
+  "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo,
+  $fallback-font-family !default;
 $cjk-ko-font-family: $base-font-family, "Malgun Gothic", $fallback-font-family !default;
 $body-font-family: $base-font-family, $fallback-font-family !default;
 
 // Unit sizes
-$unit-o: .05rem !default;
-$unit-h: .1rem !default;
-$unit-1: .2rem !default;
-$unit-2: .4rem !default;
-$unit-3: .6rem !default;
-$unit-4: .8rem !default;
+$unit-o: 0.05rem !default;
+$unit-h: 0.1rem !default;
+$unit-1: 0.2rem !default;
+$unit-2: 0.4rem !default;
+$unit-3: 0.6rem !default;
+$unit-4: 0.8rem !default;
 $unit-5: 1rem !default;
 $unit-6: 1.2rem !default;
 $unit-7: 1.4rem !default;
@@ -70,9 +76,9 @@ $unit-16: 3.2rem !default;
 // Font sizes
 $html-font-size: 20px !default;
 $html-line-height: 1.5 !default;
-$font-size: .8rem !default;
-$font-size-sm: .7rem !default;
-$font-size-lg: .9rem !default;
+$font-size: 0.8rem !default;
+$font-size-sm: 0.7rem !default;
+$font-size-lg: 0.9rem !default;
 $line-height: 1.2rem !default;
 
 // Sizes
@@ -86,12 +92,12 @@ $control-size: $unit-9 !default;
 $control-size-sm: $unit-7 !default;
 $control-size-lg: $unit-10 !default;
 $control-padding-x: $unit-2 !default;
-$control-padding-x-sm: $unit-2 * .75 !default;
+$control-padding-x-sm: $unit-2 * 0.75 !default;
 $control-padding-x-lg: $unit-2 * 1.5 !default;
 $control-padding-y: ($control-size - $line-height) / 2 - $border-width !default;
 $control-padding-y-sm: ($control-size-sm - $line-height) / 2 - $border-width !default;
 $control-padding-y-lg: ($control-size-lg - $line-height) / 2 - $border-width !default;
-$control-icon-size: .8rem !default;
+$control-icon-size: 0.8rem !default;
 
 $control-width-xs: 180px !default;
 $control-width-sm: 320px !default;
@@ -115,3 +121,246 @@ $zindex-1: 100 !default;
 $zindex-2: 200 !default;
 $zindex-3: 300 !default;
 $zindex-4: 400 !default;
+
+// -- ELEMENTS ----------------------------------
+
+// -- LAYOUT ------------------------------------
+
+// -- COMPONENTS --------------------------------
+
+// Accordions
+$accordion-header-padding: $unit-1 $unit-2 !default;
+$accordion-body-margin-bottom: $layout-spacing !default;
+
+// Avatars
+$avatar-bg: $primary-color !default;
+$avatar-color: rgba($light-color, 0.85) !default;
+$avatar-size-xs: $unit-4 !default;
+$avatar-size-sm: $unit-6 !default;
+$avatar-size-lg: $unit-12 !default;
+$avatar-size-xl: $unit-16 !default;
+$avatar-zindex: $zindex-0 !default;
+
+$avatar-icon-bg: $bg-color-light !default;
+$avatar-icon-padding: $border-width-lg !default;
+$avatar-icon-zindex: $avatar-zindex + 1 !default;
+
+$avatar-presence-bg: $gray-color !default;
+$avatar-presence-bg-online: $success-color !default;
+$avatar-presence-bg-busy: $error-color !default;
+$avatar-presence-bg-away: $warning-color !default;
+$avatar-presence-box-shadow: 0 0 0 $border-width-lg $light-color !default;
+$avatar-presence-size: 0.5em !default;
+
+// Badges
+$badge-bg: $primary-color !default;
+$badge-box-shadow: 0 0 0 0.1rem $bg-color-light !default;
+$badge-color: $light-color !default;
+$badge-font-size: $font-size-sm !default;
+$badge-zindex: $zindex-1 !default;
+
+// Bars
+$bar-bg: $bg-color-dark !default;
+$bar-border-radius: $border-radius !default;
+$bar-height: $unit-4 !default;
+$bar-height-sm: $unit-1 !default;
+
+$bar-item-bg: $primary-color !default;
+$bar-item-color: $light-color !default;
+$bar-item-font-size: $font-size-sm !default;
+$bar-item-line-height: $unit-4 !default;
+
+$bar-slider-height: $border-width-lg !default;
+$bar-slider-margin: $layout-spacing 0 !default;
+$bar-slider-btn-bg: $primary-color !default;
+$bar-slider-btn-size: $unit-3 !default;
+$bar-slider-btn-box-shadow: 0 0 0 0.1rem $primary-color !default;
+$bar-slider-item-bg: $bg-color-dark !default;
+$bar-slider-item-zindex: $zindex-0 !default;
+
+// Breadcrumbs
+$breadcrumb-margin: $unit-1 0 !default;
+$breadcrumb-padding: $unit-1 0 !default;
+
+$breadcrumb-item-color: $gray-color-dark !default;
+$breadcrumb-item-color-sep: $gray-color-dark !default;
+$breadcrumb-item-margin: 0 $unit-1 0 0 !default;
+$breadcrumb-item-padding: $unit-1 0 !default;
+$breadcrumb-item-padding-sep: 0 $unit-2 0 0 !default;
+
+// Cards
+$card-bg: $bg-color-light !default;
+$card-border: $border-width solid $border-color !default;
+$card-border-radius: $border-radius !default;
+$card-padding: $layout-spacing-lg !default;
+
+// Chips
+$chip-bg: $bg-color-dark !default;
+$chip-bg-active: $primary-color !default;
+$chip-color-active: $light-color !default;
+$chip-height: $unit-6 !default;
+$chip-line-height: $unit-4 !default;
+$chip-margin: $unit-h !default;
+$chip-max-w: $control-width-sm !default;
+$chip-padding: $unit-1 $unit-2 !default;
+
+$chip-avatar-margin-left: -$unit-2 !default;
+$chip-avatar-margin-right: $unit-1 !default;
+
+// Empty states
+$empty-bg: $bg-color !default;
+$empty-border-radius: $border-radius !default;
+$empty-color: $gray-color-dark !default;
+$empty-padding: $unit-16 $unit-8 !default;
+
+$empty-action-margin-top: $layout-spacing-lg !default;
+$empty-icon-margin-bottom: $layout-spacing-lg !default;
+$empty-title-margin: $layout-spacing auto !default;
+
+// Menu
+$menu-bg: $bg-color-light !default;
+$menu-border-radius: $border-radius !default;
+$menu-min-width: $control-width-xs !default;
+$menu-padding: $unit-2 !default;
+$menu-transform: translateY($layout-spacing-sm) !default;
+$menu-zindex: $zindex-3 !default;
+
+$menu-badge-label-margin-right: $unit-2 !default;
+
+$menu-item-margin-top: $unit-1 !default;
+$menu-item-padding: 0 $unit-2 !default;
+$menu-item-form-margin: $unit-h 0 !default;
+$menu-item-link-bg-active: $secondary-color !default;
+$menu-item-link-bg-hover: $secondary-color !default;
+$menu-item-link-color-active: $primary-color !default;
+$menu-item-link-color-hover: $primary-color !default;
+$menu-item-link-margin: 0 (-$unit-2) !default;
+$menu-item-link-padding: $unit-1 $unit-2 !default;
+
+// Modals
+$modal-padding: $layout-spacing !default;
+$modal-zindex: $zindex-4 !default;
+
+$modal-container-bg: $bg-color-light !default;
+$modal-container-border-radius: $border-radius !default;
+$modal-container-max-width: $control-width-md !default;
+$modal-container-max-width-sm: $control-width-sm !default;
+$modal-container-max-width-lg: $control-width-lg !default;
+$modal-container-padding: 0 $unit-4 !default;
+$modal-container-padding-sm: 0 $unit-2 !default;
+$modal-container-zindex: $zindex-0 !default;
+
+$modal-overlay-bg: rgba($bg-color, 0.75) !default;
+$modal-overlay-bg-lg: $bg-color-light !default;
+
+$modal-header-color: $dark-color !default;
+$modal-header-padding: $unit-4 !default;
+$modal-body-padding: $unit-4 !default;
+$modal-footer-padding: $unit-4 !default;
+
+// Navs
+$nav-margin: $unit-1 0 !default;
+
+$nav-item-color: $gray-color-dark !default;
+$nav-item-hover-color: $primary-color !default;
+$nav-item-padding: $unit-1 $unit-2 !default;
+$nav-item-active-color: darken($gray-color-dark, 10%) !default;
+$nav-item-active-hover-color: $primary-color !default;
+
+$nav-nav-margin-bottom: $unit-2 !default;
+$nav-nav-margin-left: $unit-4 !default;
+
+// Pagination
+$pagination-margin: $unit-1 0 !default;
+$pagination-padding: $unit-1 0 !default;
+
+$pagination-item-bg-active: $primary-color !default;
+$pagination-item-border-radius: $border-radius !default;
+$pagination-item-color-active: $light-color !default;
+$pagination-item-color-hover: $primary-color !default;
+$pagination-item-margin: $unit-1 $unit-o !default;
+$pagination-item-padding: $unit-1 $unit-2 !default;
+$pagination-item-span-padding: $unit-1 $unit-1 !default;
+
+// Panels
+$panel-border: $border-width solid $border-color !default;
+$panel-border-radius: $border-radius !default;
+$panel-header-padding: $layout-spacing-lg !default;
+$panel-body-padding: 0 $layout-spacing-lg !default;
+
+// Popovers
+$popover-padding: $layout-spacing !default;
+$popover-width: $control-width-sm !default;
+$popover-zindex: $zindex-3 !default;
+
+// Steps
+$step-margin: $unit-1 0 !default;
+
+$step-item-container-bg: $primary-color !default;
+$step-item-bg: $primary-color !default;
+$step-item-bg-active: $light-color !default;
+$step-item-border: $border-width-lg solid $light-color !default;
+$step-item-border-active: $border-width-lg solid $primary-color !default;
+$step-item-color: $primary-color !default;
+$step-item-height: $unit-3 !default;
+$step-item-top: $unit-1 !default;
+$step-item-width: $unit-3 !default;
+$step-item-zindex: $zindex-0 !default;
+$step-item-item-container-bg-active: $border-color !default;
+$step-item-item-bg-active: $border-color !default;
+$step-item-item-color-active: $gray-color !default;
+
+// Tabs
+$tab-border-bottom: $border-width solid $border-color !default;
+$tab-margin: $unit-1 0 ($unit-1 - $border-width) 0 !default;
+
+$tab-block-badge-right: $unit-h !default;
+$tab-block-badge-top: $unit-h !default;
+
+$tab-clear-margin-top: -$unit-1 !default;
+
+$tab-item-border-bottom: $border-width-lg solid transparent !default;
+$tab-item-border-bottom-color-active: $primary-color !default;
+$tab-item-color-hover: $link-color !default;
+$tab-item-color-active: $link-color !default;
+$tab-item-margin: 0 $unit-2 0 0 !default;
+$tab-item-padding: $unit-2 $unit-1 $unit-2 - $border-width-lg $unit-1 !default;
+
+// Tiles
+$tile-padding-left: $unit-2 !default;
+$tile-padding-right: $unit-2 !default;
+$tile-line-height: $line-height !default;
+
+// Toast
+$toast-bg-color: $dark-color !default;
+$toast-border: $border-width solid $dark-color !default;
+$toast-radius: $border-radius !default;
+$toast-color: $light-color !default;
+$toast-padding: $layout-spacing !default;
+$toast-primary-color: $primary-color !default;
+$toast-success-color: $success-color !default;
+$toast-warning-color: $warning-color !default;
+$toast-error-color: $error-color !default;
+$toast-link-color: $light-color !default;
+$toast-clear-margin: $unit-h !default;
+
+// Tooltips
+$tooltip-bg: rgba($dark-color, 0.95) !default;
+$tooltip-radius: $border-radius !default;
+$tooltip-color: $light-color !default;
+$tooltip-font-size: $font-size-sm !default;
+$tooltip-max-width: $control-width-sm !default;
+$tooltip-padding: $unit-1 $unit-2 !default;
+$tooltip-zindex: $zindex-3 !default;
+$tooltip-transform-top: translate(-50%, $unit-2) !default;
+$tooltip-transform-top-hover: translate(-50%, -$unit-1) !default;
+$tooltip-transform-right: translate(-$unit-1, 50%) !default;
+$tooltip-transform-right-hover: translate($unit-1, 50%) !default;
+$tooltip-transform-bottom: translate(-50%, -$unit-2) !default;
+$tooltip-transform-bottom-hover: translate(-50%, $unit-1) !default;
+$tooltip-transform-left: translate($unit-2, 50%) !default;
+$tooltip-transform-left-hover: translate(-$unit-1, 50%) !default;
+
+// -- UTILITIES ---------------------------------
+
+// -- EXPERIMENTALS -----------------------------

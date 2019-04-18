@@ -1,28 +1,28 @@
 // Breadcrumbs
 .breadcrumb {
   list-style: none;
-  margin: $unit-1 0;
-  padding: $unit-1 0;
+  margin: $breadcrumb-margin;
+  padding: $breadcrumb-padding;
 
   .breadcrumb-item {
-    color: $gray-color-dark;
+    color: $breadcrumb-item-color;
     display: inline-block;
     margin: 0;
-    padding: $unit-1 0;
+    padding: $breadcrumb-item-padding;
 
     &:not(:last-child) {
-      margin-right: $unit-1;
+      margin: $breadcrumb-item-margin;
 
       a {
-        color: $gray-color-dark;
+        color: $breadcrumb-item-color;
       }
     }
 
     &:not(:first-child) {
       &::before {
-        color: $gray-color-dark;
+        color: $breadcrumb-item-color-sep;
         content: "/";
-        padding-right: $unit-2;
+        padding: $breadcrumb-item-padding-sep;
       }
     }
   }

@@ -1,9 +1,9 @@
 // Avatars
 .avatar {
   @include avatar-base();
-  background: $primary-color;
+  background: $avatar-bg;
   border-radius: 50%;
-  color: rgba($light-color, .85);
+  color: $avatar-color;
   display: inline-block;
   font-weight: 300;
   line-height: 1.25;
@@ -12,16 +12,16 @@
   vertical-align: middle;
 
   &.avatar-xs {
-    @include avatar-base($unit-4);
+    @include avatar-base($avatar-size-xs);
   }
   &.avatar-sm {
-    @include avatar-base($unit-6);
+    @include avatar-base($avatar-size-sm);
   }
   &.avatar-lg {
-    @include avatar-base($unit-12);
+    @include avatar-base($avatar-size-lg);
   }
   &.avatar-xl {
-    @include avatar-base($unit-16);
+    @include avatar-base($avatar-size-xl);
   }
 
   img {
@@ -29,39 +29,39 @@
     height: 100%;
     position: relative;
     width: 100%;
-    z-index: $zindex-0;
+    z-index: $avatar-zindex;
   }
 
   .avatar-icon,
   .avatar-presence {
-    background: $bg-color-light;
+    background: $avatar-icon-bg;
     bottom: 14.64%;
     height: 50%;
-    padding: $border-width-lg;
+    padding: $avatar-icon-padding;
     position: absolute;
     right: 14.64%;
     transform: translate(50%, 50%);
     width: 50%;
-    z-index: $zindex-0 + 1;
+    z-index: $avatar-icon-zindex;
   }
 
   .avatar-presence {
-    background: $gray-color;
-    box-shadow: 0 0 0 $border-width-lg $light-color;
+    background: $avatar-presence-bg;
+    box-shadow: $avatar-presence-box-shadow;
     border-radius: 50%;
-    height: .5em;
-    width: .5em;
+    height: $avatar-presence-size;
+    width: $avatar-presence-size;
 
     &.online {
-      background: $success-color;
+      background: $avatar-presence-bg-online;
     }
 
     &.busy {
-      background: $error-color;
+      background: $avatar-presence-bg-busy;
     }
 
     &.away {
-      background: $warning-color;
+      background: $avatar-presence-bg-away;
     }
   }
 
@@ -72,6 +72,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: $zindex-0;
+    z-index: $avatar-zindex;
   }
 }

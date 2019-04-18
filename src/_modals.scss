@@ -7,7 +7,7 @@
   left: 0;
   opacity: 0;
   overflow: hidden;
-  padding: $layout-spacing;
+  padding: $modal-padding;
   position: fixed;
   right: 0;
   top: 0;
@@ -16,10 +16,10 @@
   &.active {
     display: flex;
     opacity: 1;
-    z-index: $zindex-4;
+    z-index: $modal-zindex;
 
     .modal-overlay {
-      background: rgba($bg-color, .75);
+      background: $modal-overlay-bg;
       bottom: 0;
       cursor: default;
       display: block;
@@ -30,39 +30,39 @@
     }
 
     .modal-container {
-      animation: slide-down .2s ease 1;
-      z-index: $zindex-0;
+      animation: slide-down 0.2s ease 1;
+      z-index: $modal-container-zindex;
     }
   }
 
   &.modal-sm {
     .modal-container {
-      max-width: $control-width-sm;
-      padding: 0 $unit-2;
+      max-width: $modal-container-max-width-sm;
+      padding: $modal-container-padding-sm;
     }
   }
 
   &.modal-lg {
     .modal-overlay {
-      background: $bg-color-light;
+      background: $modal-overlay-bg-lg;
     }
 
     .modal-container {
       box-shadow: none;
-      max-width: $control-width-lg;
+      max-width: $modal-container-max-width-lg;
     }
   }
 }
 
 .modal-container {
-  @include shadow-variant(.2rem);
-  background: $bg-color-light;
-  border-radius: $border-radius;
+  @include shadow-variant(0.2rem);
+  background: $modal-container-bg;
+  border-radius: $modal-container-border-radius;
   display: flex;
   flex-direction: column;
   max-height: 75vh;
-  max-width: $control-width-md;
-  padding: 0 $unit-4;
+  max-width: $modal-container-max-width;
+  padding: $modal-container-padding;
   width: 100%;
 
   &.modal-fullheight {
@@ -70,18 +70,18 @@
   }
 
   .modal-header {
-    color: $dark-color;
-    padding: $unit-4;
+    color: $modal-header-color;
+    padding: $modal-header-padding;
   }
 
   .modal-body {
     overflow-y: auto;
-    padding: $unit-4;
+    padding: $modal-body-padding;
     position: relative;
   }
 
   .modal-footer {
-    padding: $unit-4;
+    padding: $modal-footer-padding;
     text-align: right;
   }
 }
