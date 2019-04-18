@@ -124,7 +124,195 @@ $zindex-4: 400 !default;
 
 // -- ELEMENTS ----------------------------------
 
-// -- LAYOUT ------------------------------------
+// Tables
+$table-bg: $bg-color !default;
+$table-bg-active: $bg-color-dark !default;
+$table-bg-hover: $bg-color-dark !default;
+$table-td-border-bottom: $border-width solid $border-color !default;
+$table-td-padding: $unit-3 $unit-2 !default;
+$table-th-border-bottom-width: $border-width-lg !default;
+
+// Buttons
+$btn-bg: $bg-color-light !default;
+$btn-bg-active: $primary-color-dark !default;
+$btn-bg-hover: $secondary-color !default;
+$btn-border: $border-width solid $primary-color !default;
+$btn-border-color-active: darken($primary-color-dark, 5%) !default;
+$btn-border-color-hover: $primary-color-dark !default;
+$btn-border-radius: $border-radius !default;
+$btn-color: $primary-color !default;
+$btn-color-active: $light-color !default;
+$btn-font-size: $font-size !default;
+$btn-font-size-sm: $font-size-sm !default;
+$btn-font-size-lg: $font-size-lg !default;
+$btn-height: $control-size !default;
+$btn-height-sm: $control-size-sm !default;
+$btn-height-lg: $control-size-lg !default;
+$btn-line-height: $line-height !default;
+$btn-padding: $control-padding-y $control-padding-x !default;
+$btn-padding-sm: $control-padding-y-sm $control-padding-x-sm !default;
+$btn-padding-lg: $control-padding-y-lg $control-padding-x-lg !default;
+$btn-loading-border-bottom-color-active: $light-color !default;
+$btn-loading-border-left-color-active: $light-color !default;
+
+$btn-primary-bg: $primary-color !default;
+$btn-primary-bg-active: darken($primary-color-dark, 4%) !default;
+$btn-primary-bg-hover: darken($primary-color-dark, 2%) !default;
+$btn-primary-border-color: $primary-color-dark !default;
+$btn-primary-border-color-active: darken($primary-color-dark, 7%) !default;
+$btn-primary-border-color-hover: darken($primary-color-dark, 5%) !default;
+$btn-primary-color: $light-color !default;
+$btn-primary-color-active: $light-color !default;
+$btn-primary-color-hover: $light-color !default;
+$btn-primary-loading-border-bottom-color: $light-color !default;
+$btn-primary-loading-border-left-color: $light-color !default;
+
+$btn-link-color: $link-color !default;
+$btn-link-color-hover: $link-color-dark !default;
+
+$btn-action-width: $control-size !default;
+$btn-action-width-sm: $control-size-sm !default;
+$btn-action-width-lg: $control-size-lg !default;
+
+$btn-clear-bg-hover: rgba($bg-color, 0.5) !default;
+$btn-clear-height: $unit-5 !default;
+$btn-clear-line-height: $unit-4 !default;
+$btn-clear-margin-left: $unit-1 !default;
+$btn-clear-padding: $unit-h !default;
+$btn-clear-width: $unit-5 !default;
+
+$btn-group-btn-margin-left: -$border-width !default;
+$btn-group-btn-zindex: $zindex-0 !default;
+
+// Forms
+$form-group-margin-bottom: $layout-spacing !default;
+$form-fieldset-margin-bottom: $layout-spacing-lg !default;
+$form-legend-font-size: $font-size-lg !default;
+$form-legend-margin-bottom: $layout-spacing-lg !default;
+
+$form-label-line-height: $line-height !default;
+$form-label-font-size-sm: $font-size-sm !default;
+$form-label-font-size-lg: $font-size-lg !default;
+$form-label-padding: $control-padding-y + $border-width 0 !default;
+$form-label-padding-sm: $control-padding-y-sm + $border-width 0 !default;
+$form-label-padding-lg: $control-padding-y-lg + $border-width 0 !default;
+
+$form-input-bg: $bg-color-light !default;
+$form-input-border: $border-width solid $border-color-dark !default;
+$form-input-border-color-focus: $primary-color !default;
+$form-input-border-radius: $border-radius !default;
+$form-input-color: $body-font-color !default;
+$form-input-color-placeholder: $gray-color !default;
+$form-input-font-size: $font-size !default;
+$form-input-font-size-sm: $font-size-sm !default;
+$form-input-font-size-lg: $font-size-lg !default;
+$form-input-height: $control-size !default;
+$form-input-height-sm: $control-size-sm !default;
+$form-input-height-lg: $control-size-lg !default;
+$form-input-line-height: $line-height !default;
+$form-input-padding: $control-padding-y $control-padding-x !default;
+$form-input-padding-sm: $control-padding-y-sm $control-padding-x-sm !default;
+$form-input-padding-lg: $control-padding-y-lg $control-padding-x-lg !default;
+
+$form-input-hint-color: $gray-color !default;
+$form-input-hint-color-error: $error-color !default;
+$form-input-hint-color-success: $success-color !default;
+$form-input-hint-font-size: $font-size-sm !default;
+$form-input-hint-margin-top: $unit-1 !default;
+
+$form-select-bg: $bg-color-light !default;
+$form-select-border: $border-width solid $border-color-dark !default;
+$form-select-border-color-focus: $primary-color !default;
+$form-select-border-radius: $border-radius !default;
+$form-select-font-size: $font-size !default;
+$form-select-font-size-sm: $font-size-sm !default;
+$form-select-font-size-lg: $font-size-lg !default;
+$form-select-height: $control-size !default;
+$form-select-height-sm: $control-size-sm !default;
+$form-select-height-lg: $control-size-lg !default;
+$form-select-line-height: $line-height !default;
+$form-select-padding: $control-padding-y $control-padding-x !default;
+$form-select-padding-sm: $control-padding-y-sm
+  ($control-icon-size + $control-padding-x-sm) $control-padding-y-sm
+  $control-padding-x-sm !default;
+$form-select-padding-lg: $control-padding-y-lg
+  ($control-icon-size + $control-padding-x-lg) $control-padding-y-lg
+  $control-padding-x-lg !default;
+$form-select-multiple-padding: $control-padding-y $control-padding-x !default;
+$form-select-multiple-option-padding: $unit-h $unit-1 !default;
+$form-select-not-multiple-bg: $bg-color-light
+  url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E")
+  no-repeat right 0.35rem center / 0.4rem 0.5rem !default;
+$form-select-not-multiple-padding-right: $control-icon-size + $control-padding-x !default;
+
+$form-icon-has-icon-height: $control-icon-size !default;
+$form-icon-has-icon-horizontal: $border-width !default;
+$form-icon-has-icon-margin: 0 $control-padding-y !default;
+$form-icon-has-icon-padding: $control-icon-size + $control-padding-y * 2;
+$form-icon-has-icon-width: $control-icon-size !default;
+$form-icon-has-icon-zindex: $zindex-0 + 1 !default;
+
+$form-check-line-height: $line-height !default;
+$form-check-margin: ($control-size - $control-size-sm) / 2 0 !default;
+$form-check-min-height: $control-size-sm !default;
+$form-check-padding: (($control-size-sm - $line-height) / 2) $control-padding-x
+  (($control-size-sm - $line-height) / 2)
+  ($control-icon-size + $control-padding-x) !default;
+
+$form-check-icon-bg: $bg-color-light !default;
+$form-check-icon-border: $border-width solid $border-color-dark !default;
+$form-check-icon-border-radius: $border-radius !default;
+$form-check-icon-height: $control-icon-size !default;
+$form-check-icon-top: ($control-size-sm - $control-icon-size) / 2 !default;
+$form-check-icon-width: $control-icon-size !default;
+
+$form-check-input-icon-bg-active: $bg-color-dark !default;
+$form-check-input-icon-bg-checked: $primary-color !default;
+$form-check-input-icon-bg-indeterminate: $primary-color !default;
+$form-check-input-icon-bg-indeterminate-before: $bg-color-light !default;
+$form-check-input-icon-border-checked: $border-width-lg solid $light-color !default;
+$form-check-input-icon-border-color-focus: $primary-color !default;
+$form-check-input-icon-border-color-checked: $primary-color !default;
+$form-check-input-icon-border-color-indeterminate: $primary-color !default;
+
+$form-check-input-font-size-sm: $font-size-sm !default;
+$form-check-input-font-size-lg: $font-size-lg !default;
+$form-check-input-margin-lg: ($control-size-lg - $control-size-sm) / 2 0 !default;
+
+$form-switch-input-icon-bg-disabled: $bg-color-light !default;
+
+$form-horizontal-padding: $layout-spacing 0 !default;
+
+// Labels
+$label-bg: $bg-color-dark !default;
+$label-color: lighten($body-font-color, 5%) !default;
+$label-primary-bg: $primary-color !default;
+$label-primary-color: $light-color !default;
+$label-secondary-bg: $secondary-color !default;
+$label-secondary-color: $primary-color !default;
+$label-success-bg: $success-color !default;
+$label-success-color: $light-color !default;
+$label-warning-bg: $warning-color !default;
+$label-warning-color: $light-color !default;
+$label-error-bg: $error-color !default;
+$label-error-color: $light-color !default;
+
+// Codes
+$code-bg: $bg-color !default;
+$code-label-bg: lighten($code-color, 42.5%) !default;
+$code-label-color: $code-color !default;
+$code-border-radius: $border-radius !default;
+$code-font-color: $body-font-color !default;
+
+$code-color-before: $gray-color !default;
+$code-font-size-before: $font-size-sm !default;
+$code-right-before: $layout-spacing !default;
+$code-top-before: $unit-h !default;
+
+// Media
+$figure-margin: 0 0 $layout-spacing 0 !default;
+$figure-caption-color: $gray-color-dark !default;
+$figure-caption-margin-top: $layout-spacing !default;
 
 // -- COMPONENTS --------------------------------
 
@@ -360,7 +548,5 @@ $tooltip-transform-bottom: translate(-50%, -$unit-2) !default;
 $tooltip-transform-bottom-hover: translate(-50%, $unit-1) !default;
 $tooltip-transform-left: translate($unit-2, 50%) !default;
 $tooltip-transform-left-hover: translate(-$unit-1, 50%) !default;
-
-// -- UTILITIES ---------------------------------
 
 // -- EXPERIMENTALS -----------------------------

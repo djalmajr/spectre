@@ -1,26 +1,26 @@
 // Codes
 code {
   @include label-base();
-  @include label-variant($code-color, lighten($code-color, 42.5%));
+  @include label-variant($code-label-color, $code-label-bg);
   font-size: 85%;
 }
 
 .code {
-  border-radius: $border-radius;
-  color: $body-font-color;
+  border-radius: $code-border-radius;
+  color: $code-font-color;
   position: relative;
 
   &::before {
-    color: $gray-color;
+    color: $code-color-before;
     content: attr(data-lang);
-    font-size: $font-size-sm;
+    font-size: $code-font-size-before;
     position: absolute;
-    right: $layout-spacing;
-    top: $unit-h;
+    right: $code-right-before;
+    top: $code-top-before;
   }
 
   code {
-    background: $bg-color;
+    background: $code-bg;
     color: inherit;
     display: block;
     line-height: 1.5;

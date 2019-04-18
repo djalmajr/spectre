@@ -1,20 +1,20 @@
 // Buttons
 .btn {
   appearance: none;
-  background: $bg-color-light;
-  border: $border-width solid $primary-color;
-  border-radius: $border-radius;
-  color: $primary-color;
+  background: $btn-bg;
+  border: $btn-border;
+  border-radius: $btn-border-radius;
+  color: $btn-color;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size;
-  height: $control-size;
-  line-height: $line-height;
+  font-size: $btn-font-size;
+  height: $btn-height;
+  line-height: $btn-line-height;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: $btn-padding;
   text-align: center;
   text-decoration: none;
-  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -23,20 +23,20 @@
   }
   &:focus,
   &:hover {
-    background: $secondary-color;
-    border-color: $primary-color-dark;
+    background: $btn-bg-hover;
+    border-color: $btn-border-color-hover;
     text-decoration: none;
   }
   &:active,
   &.active {
-    background: $primary-color-dark;
-    border-color: darken($primary-color-dark, 5%);
-    color: $light-color;
+    background: $btn-bg-active;
+    border-color: $btn-border-color-active;
+    color: $btn-color-active;
     text-decoration: none;
     &.loading {
       &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
+        border-bottom-color: $btn-loading-border-bottom-color-active;
+        border-left-color: $btn-loading-border-left-color-active;
       }
     }
   }
@@ -44,31 +44,31 @@
   &:disabled,
   &.disabled {
     cursor: default;
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
   }
 
   // Button Primary
   &.btn-primary {
-    background: $primary-color;
-    border-color: $primary-color-dark;
-    color: $light-color;
+    background: $btn-primary-bg;
+    border-color: $btn-primary-border-color;
+    color: $btn-primary-color;
     &:focus,
     &:hover {
-      background: darken($primary-color-dark, 2%);
-      border-color: darken($primary-color-dark, 5%);
-      color: $light-color;
+      background: $btn-primary-bg-hover;
+      border-color: $btn-primary-border-color-hover;
+      color: $btn-primary-color-hover;
     }
     &:active,
     &.active {
-      background: darken($primary-color-dark, 4%);
-      border-color: darken($primary-color-dark, 7%);
-      color: $light-color;
+      background: $btn-primary-bg-active;
+      border-color: $btn-primary-border-color-active;
+      color: $btn-primary-color-active;
     }
     &.loading {
       &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
+        border-bottom-color: $btn-primary-loading-border-bottom-color;
+        border-left-color: $btn-primary-loading-border-left-color;
       }
     }
   }
@@ -86,26 +86,26 @@
   &.btn-link {
     background: transparent;
     border-color: transparent;
-    color: $link-color;
+    color: $btn-link-color;
     &:focus,
     &:hover,
     &:active,
     &.active {
-      color: $link-color-dark;
+      color: $btn-link-color-hover;
     }
   }
 
   // Button Sizes
   &.btn-sm {
-    font-size: $font-size-sm;
-    height: $control-size-sm;
-    padding: $control-padding-y-sm $control-padding-x-sm;
+    font-size: $btn-font-size-sm;
+    height: $btn-height-sm;
+    padding: $btn-padding-sm;
   }
 
   &.btn-lg {
-    font-size: $font-size-lg;
-    height: $control-size-lg;
-    padding: $control-padding-y-lg $control-padding-x-lg;
+    font-size: $btn-font-size-lg;
+    height: $btn-height-lg;
+    padding: $btn-padding-lg;
   }
 
   // Button Block
@@ -116,16 +116,16 @@
 
   // Button Action
   &.btn-action {
-    width: $control-size;
+    width: $btn-action-width;
     padding-left: 0;
     padding-right: 0;
 
     &.btn-sm {
-      width: $control-size-sm;
+      width: $btn-action-width-sm;
     }
 
     &.btn-lg {
-      width: $control-size-lg;
+      width: $btn-action-width-lg;
     }
   }
 
@@ -134,19 +134,19 @@
     background: transparent;
     border: 0;
     color: currentColor;
-    height: $unit-5;
-    line-height: $unit-4;
-    margin-left: $unit-1;
+    height: $btn-clear-height;
+    line-height: $btn-clear-line-height;
+    margin-left: $btn-clear-margin-left;
     margin-right: -2px;
     opacity: 1;
-    padding: $unit-h;
+    padding: $btn-clear-padding;
     text-decoration: none;
-    width: $unit-5;
+    width: $btn-clear-width;
 
     &:focus,
     &:hover {
-      background: rgba($bg-color, .5);
-      opacity: .95;
+      background: $btn-clear-bg-hover;
+      opacity: 0.95;
     }
 
     &::before {
@@ -168,18 +168,18 @@
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -$border-width;
+      margin-left: $btn-group-btn-margin-left;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -$border-width;
+      margin-left: $btn-group-btn-margin-left;
     }
     &:focus,
     &:hover,
     &:active,
     &.active {
-      z-index: $zindex-0;
+      z-index: $btn-group-btn-zindex;
     }
   }
 
